@@ -7,6 +7,8 @@ function App() {
   const [count, setCount] = useState(0)
   const [count2, setCount2] = useState(0)
 
+  const [name, setName] = useState('')
+
   return (
     <>
       <div>
@@ -28,6 +30,12 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
+
+        <div>
+          <input type="text" onChange={(e) => setName(e.target.value)} />
+          <br />
+          <button onClick={() => window.alert(`your name is ${name}!!`)}>display</button>
+        </div>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
