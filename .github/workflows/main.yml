@@ -1,10 +1,6 @@
 name: deploy website
 on:
   workflow_dispatch:
-    inputs:
-      default: 'main'
-      required: true
-
 
 jobs:
   deploy:
