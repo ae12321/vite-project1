@@ -7,9 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      #  your build commands
-      # - run: |
-      #    ng build --prod
+
+      - name: build
+        shell: bash
+        run: |
+          npm install
+          npm run build
+
       - uses: amondnet/vercel-action@v20 #deploy
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
